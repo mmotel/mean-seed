@@ -8,8 +8,8 @@
 
 #### server
 
-- Mongoose - MongoDB
-- PassportJS - local -> OAuth
+- Mongodb driver wraper
+- PassportJS - local
 - Express
 - Socket.IO
 - Rest API
