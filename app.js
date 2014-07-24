@@ -17,32 +17,6 @@ var Socket = require('./server/socket.js');
 var MONGO_URL = 'mongodb://localhost:27017/testdb';
 var Manager = require('./server/manager.js')( MONGO_URL );
 
-// passport.serializeUser(function(user, done) {
-//   done(null, user);
-// });
-//
-// passport.deserializeUser(function(obj, done) {
-// 	done(null, obj);
-// });
-//
-// passport.use(
-//   new LocalStrategy({ usernameField: 'login' }, function(login, password, done) {
-//     Manager.findUserByLogin( login, function(err, user) {
-//       if (err) return done(err);
-//       if (!user) return done(null, false);
-//
-//       if(user.password === password) {
-//         delete(user._id);
-//         delete(user.password);
-//         return done(null, user);
-//       }
-//       else {
-//         return done(null, false);
-//       }
-//     });
-//   })
-// );
-
 //setup passport
 require('./server/passport.js')( passport, Manager );
 
@@ -71,12 +45,3 @@ require('./server/authrestapi.js')( app, passport, Manager );
 
 //setup rest api
 require('./server/restapi.js')( app, Manager );
-
-// app.post('/api/login', passport.authenticate('local'),
-//   function(req, res) { routes.signin(req, res); });
-//
-// app.get('/api/verify',
-//   function (req, res) { routes.check(req, res); });
-//
-// app.get('/api/logout',
-//   function(req, res) { routes.signout(req, res); });
