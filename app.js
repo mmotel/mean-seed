@@ -6,9 +6,6 @@ var session = require('express-session');
 var bodyParser = require('body-parser');
 
 var passport = require('passport');
-// var LocalStrategy = require('passport-local').Strategy;
-
-// var Routes = require('./server/routes');
 
 //socket.io server
 var Socket = require('./server/socket.js');
