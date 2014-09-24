@@ -13,7 +13,7 @@ module.exports = function ( passport, Manager ) {
 
   passport.use(
     new LocalStrategy({ usernameField: 'login' }, function(login, password, done) {
-      Manager.User.findOne( { 'login': login }, function(err, user) {
+      Manager.findOneUser( { 'login': login }, function(err, user) {
         if (err) return done(err);
         if (!user) return done(null, false);
 

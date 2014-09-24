@@ -31,7 +31,13 @@ appControllers.controller('MainAppCtrl',
 controller('indexCtrl',
   ['$scope',
   function( $scope ) {
-
+    $scope.Categories = [
+      { "name": "Category 1" },
+      { "name": "Category 2" },
+      { "name": "Category 3" },
+      { "name": "Category 4" },
+      { "name": "Category 5" }
+    ];
 }]).
 controller('signupCtrl',
   ['$scope', '$location',

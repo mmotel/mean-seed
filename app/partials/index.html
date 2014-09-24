@@ -2,5 +2,20 @@
   <div class="col-md-12">
     <h2>Index</h2>
     <hr/>
+
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+        </tr>
+      </thead>
+
+      <tr ng-repeat="cat in Categories">
+        <td>
+          {{ cat.name }}
+        </td>
+      </tr>
+    </table>
+
   </div>
 </div>
