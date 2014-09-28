@@ -2,7 +2,7 @@
 
 /* Controllers */
 
-var appControllers = angular.module('appControllers', ['ngCookies']);
+var appControllers = angular.module('appControllers', []);
 
 appControllers.controller('MainAppCtrl',
   ['$scope', 'AuthService',
